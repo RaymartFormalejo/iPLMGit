@@ -828,6 +828,7 @@ admin.site.register(hdTransferCert, hdTransferCertAdmin)
 
 
 class loaClearanceFormAdmin(admin.ModelAdmin):
+    search_fields = ['studentID', 'lname', 'fname', 'mname','eadd']
     model = loaClearanceForm
     list_display = ('get_id','studentID','First_Name','Middle_Name','Last_Name')
 
@@ -853,6 +854,7 @@ admin.site.register(loaClearanceForm, loaClearanceFormAdmin)
 
 
 class loaFormAdmin(admin.ModelAdmin):
+    search_fields = ['studentID', 'lname', 'fname', 'mname','eadd']
     model = loaForm
     list_display = ('get_id','studentID','First_Name','Middle_Name','Last_Name')
 
